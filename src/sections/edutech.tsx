@@ -128,10 +128,10 @@ export function Edutech() {
         
         {/* FIRST ROW */}
           
-        <div className="px-4 md:px-10 pb-10">
+        <div className="px-4 md:px-10 pb-10 ">
        <div className="pb-6 md:pb-8">
-             <div className="text-2xl md:text-4xl  font-bold  text-center md:text-start">Industry-Focused IT Courses</div>
-           <div className="text-gray-700 md:pt-1 text-center md:text-start">Build Your Tech Career with Industry-Focused Learning</div>
+             <div className="text-2xl md:text-4xl  font-bold  text-center ">Industry-Focused IT Courses</div>
+           <div className="text-gray-700 md:pt-1 text-center ">Build Your Tech Career with Industry-Focused Learning</div>
        </div>
           <div className="flex gap-5 md:gap-8 overflow-x-auto scroll-smooth scrollbar-hide pb-2">
 
@@ -160,8 +160,8 @@ export function Edutech() {
         {/* SECOND ROW */}
         <div className="px-4 md:px-10 pb-10">
            <div className="pb-6 md:pb-8">
-             <div className="text-2xl md:text-4xl  font-bold  text-center md:text-start">Skill Development Courses</div>
-           <div className="text-gray-700 md:pt-1 text-center md:text-start">Build Confidence Through Skill-Based Learning</div>
+             <div className="text-2xl md:text-4xl  font-bold  text-center ">Skill Development Courses</div>
+           <div className="text-gray-700 md:pt-1 text-center ">Build Confidence Through Skill-Based Learning</div>
        </div>
           <div className="flex gap-5 md:gap-8 overflow-x-auto scroll-smooth scrollbar-hide pb-2">
 
@@ -218,7 +218,7 @@ export function Edutech() {
         <div className="w-full md:w-2/3 rounded-xl overflow-hidden">
           <Rating />
         </div>
-
+        
       </div>
     </div>
   );

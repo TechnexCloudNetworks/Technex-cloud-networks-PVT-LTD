@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import head from "../assets/digital.jpg";
 import image from "../assets/digitalimage2.jpg";
-import { CountUp } from "../components/countup";
+import { TestimonialsCards } from "../components/clientcard";
 import MarketingCarousel from "../components/digitalcards";
-import FlipCard from "../components/flipcard";
+import { Growthprocess } from "../components/ourgrowth";
 
 export function Digitalmarketing() {
   return (
@@ -35,7 +36,7 @@ export function Digitalmarketing() {
 
       {/* Services Strip */}
       <div className="bg-[#2F3E46] text-white py-4 px-3">
-        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-12 text-center font-semibold text-[10px] md:text-sm sm:text-base">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-70 text-center font-semibold text-[10px] md:text-sm sm:text-base">
           <div>Graphic Designing</div>
           <div>Search Engine Optimization</div>
           <div>Meta Ads</div>
@@ -75,84 +76,33 @@ export function Digitalmarketing() {
       <div className="pt-10 overflow-hidden">
         <div className="text-center px-4">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#2F3E46]">
-            Our Services
+           Services Built for Modern Brands
           </h1>
-          <span className="text-gray-500">Where ideas turn into impactful digital experiences</span>
+          <span className="text-gray-500">Every service is backed by real-time analytics, cloud-native tooling, and a team obsessed with measurable results</span>
         </div>
 
         <div className="mt-6 overflow-hidden">
           <MarketingCarousel />
         </div>
       </div>
-
-      {/* Bottom Section */}
-      <div className="w-full px-4 py-10 overflow-hidden">
-        <div className="flex flex-col lg:flex-row gap-8 items-center overflow-hidden">
-
-          {/* Flip Card */}
-          <div className="w-full lg:w-[35%] flex justify-center items-center overflow-hidden">
-            <div className="w-full max-w-[320px] pl-3 md:pl-0 sm:max-w-[300px] md:max-w-[420px]">
-              <FlipCard />
-            </div>
-          </div>
-
-          {/* Content */}
-          <div className="w-full lg:w-[65%] flex flex-col gap-6">
-
-            {/* Count Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div className="bg-[#2F3E46] rounded-2xl p-6 shadow-md">
-                <h1 className="text-4xl md:text-5xl font-bold text-white">
-                  <CountUp end={16} />+
-                </h1>
-
-                <p className="text-lg md:text-xl font-semibold mt-2 text-white">
-                  Team Members
-                </p>
-              </div>
-
-              <div className="bg-[#2F3E46] rounded-2xl p-6 shadow-md">
-                <h1 className="text-4xl md:text-5xl font-bold text-white">
-                  <CountUp end={10} />+
-                </h1>
-
-                <p className="text-lg md:text-xl font-semibold mt-2 text-white">
-                  Customer Success
-                </p>
-              </div>
-            </div>
-
-            {/* Text Boxes */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-
-              <div className="bg-white shadow-md rounded-2xl p-5 hover:shadow-xl transition duration-300">
-                <h2 className="text-lg font-bold text-[#2F3E46] mb-3">
-                  Performance Analytics
-                </h2>
-
-                <p className="text-sm sm:text-base leading-relaxed text-gray-700">
-                  Real-time tracking of campaigns, website traffic insights,
-                  conversion tracking, funnel visualization, and custom KPIs
-                  based on business goals.
-                </p>
-              </div>
-
-              <div className="bg-white shadow-md rounded-2xl p-5 hover:shadow-xl transition duration-300">
-                <h2 className="text-lg font-bold text-[#2F3E46] mb-3">
-                  Social Media Insights
-                </h2>
-
-                <p className="text-sm sm:text-base leading-relaxed text-gray-700">
-                  Track engagement metrics, audience growth, demographics,
-                  platform performance, and content success across social media
-                  channels.
-                </p>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
+      <div className="text-center bg-[#2F3E46]">
+        <div><p className="text-[#24c0c5] mt-3 font-bold pt-6">Trusted By</p></div>
+           <div><h1 className=" text-3xl md:text-4xl  font-bold text-white pb-3">Brands We've Grown</h1></div>
+           <div><p className="text-gray-200 ">From startups to enterprise, Technex has helped companies across <br /> industries achieve exceptional <br /> digital growth.</p></div>
+      </div>
+      <div >
+        <TestimonialsCards/>
+      </div>
+      <div>
+          <Growthprocess/>
+      </div>
+      <div className="text-center bg-[#2F3E46] pb-15 border-b-1 border-[#24c0c5] md:h-[450px] h-[400px] ">
+           <div className="text-[#24c0c5] pt-20 ">LET'S WORK TOGETHER</div>
+           <div className="text-white text-5xl md:text-7xl font-bold pb-5 ">Ready to Grow <br /><span className="text-[#24c0c591]"> Your Branch?</span></div>
+           <div className="text-white">Talk to our strategy team and get a free digital audit <br /> within  48 hours.</div>
+         <div className="flex justify-center pt-4 ">
+             <Link to='/contactus'><div className="text-white font-bold bg-[#24c0c5] w-[200px] p-3 rounded-4xl  hover:shadow-md hover:shadow-black hover:border-1"><button>Get A Free Demo</button></div></Link>
+         </div>
       </div>
     </>
   );

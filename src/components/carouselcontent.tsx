@@ -59,7 +59,7 @@ export default function TextCarousel() {
             key={index}
             className="min-w-full flex items-center justify-center text-center"
           >
-            <p className="text-lg md:text-xl font-bold text-gray-300">
+            <p className="text-md md:text-xl font-bold text-gray-300">
               {offer.description}
             </p>
           </div>

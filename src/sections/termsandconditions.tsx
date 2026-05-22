@@ -56,7 +56,7 @@ export function Terms(){
                 }
                 <ul className="md:text-[18px] text-[13px] font-bold py-3"  >
                  <li>Email: <a href="" className="text-blue-500" style={{textDecoration:'underline'}}> technexcloudnetworks@gmail.com</a></li>
-                 <li>Website:<a href="" className="text-blue-500" style={{textDecoration:'underline'}}> technexcloudnetworks.in</a></li>
+                 <li>Website:<a href="https://technexcloudnetworks.in/#" className="text-blue-500" style={{textDecoration:'underline'}}> technexcloudnetworks.in</a></li>
                </ul>
                </div>
             </div>

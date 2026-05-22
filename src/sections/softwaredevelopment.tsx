@@ -76,12 +76,7 @@ export function Softwaredevelopment() {
 
       {/* ================= CLIENTS SECTION ================= */}
       <div>
-        <div className="bg-[#F2F2F2] py-6">
-
-          <div className="flex justify-center text-3xl md:text-4xl font-bold text-[#2F3E46] px-4 text-center">
-            <h1>Our Clients</h1>
-          </div>
-
+        <div>
           {/* DESKTOP UNCHANGED */}
           <div className="overflow-hidden">
             <ProcessCarousel />

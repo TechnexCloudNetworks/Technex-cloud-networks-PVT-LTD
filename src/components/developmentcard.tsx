@@ -1,101 +1,90 @@
 // ProcessCarousel.tsx
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
+import next_wash from "../assets/nextwash.png";
+import dsr from "../assets/DSREV.png";
 
-const cards = [
-  {
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
-    content:
-      "We understand your business goals, hiring needs, and project expectations to create the right workforce strategy.",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
-    content:
-      "We evaluate skill gaps, project scope, and technical requirements to build an efficient execution plan.",
-  },
+const clients = [
+  { image: next_wash },
+  { image: dsr },
   {
     image:
       "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop",
-    content:
-      "We source top professionals, conduct screenings, and ensure smooth onboarding into your organization.",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
-    content:
-      "We provide reliable placement and replacement support to ensure uninterrupted business operations.",
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w-1200&auto=format&fit=crop",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop",
-    content:
-      "We manage payroll, compliance, and ongoing employee support for long-term workforce success.",
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w-1200&auto=format&fit=crop",
   },
 ];
 
 export default function ProcessCarousel() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const animationRef = useRef<number | null>(null);
 
-  const scrollLeft = () => {
-    scrollRef.current?.scrollBy({
-      left: -400,
-      behavior: "smooth",
-    });
-  };
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
 
-  const scrollRight = () => {
-    scrollRef.current?.scrollBy({
-      left: 400,
-      behavior: "smooth",
-    });
-  };
+    // 🔥 Increased speed (adjust this value if needed)
+    const scrollSpeed = 2.5;
+
+    const autoScroll = () => {
+      if (!container) return;
+
+      container.scrollLeft += scrollSpeed;
+
+      // Reset for infinite loop effect
+      if (
+        container.scrollLeft >=
+        container.scrollWidth - container.clientWidth
+      ) {
+        container.scrollLeft = 0;
+      }
+
+      animationRef.current = requestAnimationFrame(autoScroll);
+    };
+
+    animationRef.current = requestAnimationFrame(autoScroll);
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <section className=" py-16">
+    <section className="py-16 bg-[#F2F2F2]">
       <div className="mx-auto max-w-7xl px-6">
+        {/* TITLE */}
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            Our Clients
+          </h2>
+          <p className="text-gray-500 mt-2">
+            Trusted by amazing companies worldwide
+          </p>
+        </div>
+
         {/* CAROUSEL */}
-        <div className="relative">
-          {/* LEFT ARROW */}
-          <button
-            onClick={scrollLeft}
-            className="absolute left-[-20px] top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg transition hover:scale-105 md:flex"
-          >
-            <span className="text-2xl font-bold text-black">‹</span>
-          </button>
-
-          {/* RIGHT ARROW */}
-          <button
-            onClick={scrollRight}
-            className="absolute right-[-20px] top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg transition hover:scale-105 md:flex"
-          >
-            <span className="text-2xl font-bold text-black">›</span>
-          </button>
-
-          {/* SCROLLABLE CARDS */}
+        <div className="relative overflow-hidden">
           <div
             ref={scrollRef}
-            className="flex gap-8 overflow-x-auto scroll-smooth scrollbar-hide"
+            className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar"
           >
-            {cards.map((card, index) => (
-              <div
-                key={index}
-                className="min-w-[360px] overflow-hidden rounded-[26px] bg-white shadow-md"
-              >
-                {/* IMAGE */}
-                <div className="h-[260px] overflow-hidden">
+            {[...clients, ...clients].map((client, index) => (
+              <div key={index} className="flex-shrink-0">
+                <div className="group relative w-[140px] sm:w-[160px] md:w-[180px] aspect-square rounded-2xl overflow-hidden shadow-md bg-gray-100 hover:shadow-xl transition-all duration-300">
                   <img
-                    src={card.image}
-                    alt=""
-                    className="h-full w-full object-cover"
+                    src={client.image}
+                    alt="client"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                </div>
 
-                {/* CONTENT */}
-                <div className="p-6">
-                  <p className="text-sm leading-7 text-[#4b5563]">
-                    {card.content}
-                  </p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition" />
                 </div>
               </div>
             ))}

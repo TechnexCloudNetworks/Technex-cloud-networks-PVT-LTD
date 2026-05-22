@@ -130,160 +130,175 @@ export function Applicationform() {
   };
 
   return (
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 via-white to-gray-200 px-4 py-10">
 
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4 py-10">
+    {/* OUTER GRADIENT FRAME */}
+    <div className="w-full max-w-3xl p-[3px] rounded-3xl bg-gradient-to-r from-[#2F3E46] via-[#3C4F58] to-[#2F3E46] shadow-2xl">
 
-      <div className="w-full max-w-2xl bg-white shadow-xl rounded-2xl p-8">
+      {/* GLASS LAYER */}
+      <div className="p-[3px] rounded-3xl bg-white/80 backdrop-blur-md">
 
-        <h1 className="text-3xl font-bold text-center mb-8">
-          Application Form
-        </h1>
+        {/* MAIN CARD */}
+        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-inner">
 
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-5"
-        >
+          {/* HEADER */}
+          <div className="text-center mb-8">
+            <div className="h-1 w-24 bg-[#2F3E46] rounded-full mx-auto mb-4" />
 
-          {/* Name */}
-          <div>
+            <h1 className="text-3xl sm:text-4xl font-bold text-[#2F3E46]">
+              Application Form
+            </h1>
 
-            <label className="block mb-2 font-medium">
-              Full Name
-            </label>
-
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Enter your name"
-              required
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-black"
-            />
-
-          </div>
-
-          {/* Email */}
-          <div>
-
-            <label className="block mb-2 font-medium">
-              Email Address
-            </label>
-
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Enter your email"
-              required
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-black"
-            />
-
-          </div>
-
-          {/* Phone */}
-          <div>
-
-            <label className="block mb-2 font-medium">
-              Phone Number
-            </label>
-
-            <input
-              type="text"
-              name="phno"
-              value={formData.phno}
-              onChange={handleChange}
-              placeholder="Enter your phone number"
-              required
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-black"
-            />
-
-          </div>
-
-          {/* Role */}
-          <div>
-
-            <label className="block mb-2 font-medium">
-              Applying Role
-            </label>
-
-            <select
-              name="role"
-              value={formData.role}
-              onChange={handleChange}
-              required
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-black"
-            >
-
-              <option value="">
-                Select Role
-              </option>
-
-              <option value="Frontend Developer">
-                Frontend Developer
-              </option>
-
-              <option value="Backend Developer">
-                Backend Developer
-              </option>
-
-              <option value="Full Stack Developer">
-                Full Stack Developer
-              </option>
-
-              <option value="UI/UX Designer">
-                UI/UX Designer
-              </option>
-
-            </select>
-
-          </div>
-
-          {/* Resume Upload */}
-          <div>
-
-            <label className="block mb-2 font-medium">
-              Upload Resume
-            </label>
-
-            <input
-              ref={fileInputRef}
-              type="file"
-              accept=".pdf,.doc,.docx"
-              onChange={handleFileChange}
-              required
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-black"
-            />
-
-          </div>
-
-          {/* Submit */}
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full bg-black text-white py-3 rounded-lg hover:opacity-90 transition"
-          >
-
-            {loading
-              ? "Submitting..."
-              : "Submit Application"}
-
-          </button>
-
-          {/* Message */}
-          {message && (
-
-            <p className="text-center font-medium pt-3">
-              {message}
+            <p className="text-gray-500 mt-2 text-sm sm:text-base">
+              Apply for your desired role by filling this form
             </p>
+          </div>
 
-          )}
+          <form onSubmit={handleSubmit} className="space-y-6">
 
-        </form>
+            {/* NAME */}
+            <div>
+              <label className="block mb-2 text-sm font-medium text-gray-700">
+                Full Name
+              </label>
 
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Enter your name"
+                required
+                className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200
+                text-gray-800 placeholder-gray-400
+                transition-all duration-300
+                hover:bg-white hover:border-gray-300
+                focus:bg-white focus:border-[#2F3E46]
+                focus:ring-4 focus:ring-[#2F3E46]/15
+                focus:outline-none shadow-sm"
+              />
+            </div>
+
+            {/* EMAIL */}
+            <div>
+              <label className="block mb-2 text-sm font-medium text-gray-700">
+                Email Address
+              </label>
+
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Enter your email"
+                required
+                className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200
+                text-gray-800 placeholder-gray-400
+                transition-all duration-300
+                hover:bg-white hover:border-gray-300
+                focus:bg-white focus:border-[#2F3E46]
+                focus:ring-4 focus:ring-[#2F3E46]/15
+                focus:outline-none shadow-sm"
+              />
+            </div>
+
+            {/* PHONE */}
+            <div>
+              <label className="block mb-2 text-sm font-medium text-gray-700">
+                Phone Number
+              </label>
+
+              <input
+                type="text"
+                name="phno"
+                value={formData.phno}
+                onChange={handleChange}
+                placeholder="Enter your phone number"
+                required
+                className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200
+                text-gray-800 placeholder-gray-400
+                transition-all duration-300
+                hover:bg-white hover:border-gray-300
+                focus:bg-white focus:border-[#2F3E46]
+                focus:ring-4 focus:ring-[#2F3E46]/15
+                focus:outline-none shadow-sm"
+              />
+            </div>
+
+            {/* ROLE */}
+            <div>
+              <label className="block mb-2 text-sm font-medium text-gray-700">
+                Applying Role
+              </label>
+
+              <select
+                name="role"
+                value={formData.role}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200
+                text-gray-800
+                transition-all duration-300
+                hover:bg-white hover:border-gray-300
+                focus:bg-white focus:border-[#2F3E46]
+                focus:ring-4 focus:ring-[#2F3E46]/15
+                focus:outline-none shadow-sm"
+              >
+                <option value="">Select Role</option>
+                <option value="Frontend Developer">Frontend Developer</option>
+                <option value="Backend Developer">Backend Developer</option>
+                <option value="Full Stack Developer">Full Stack Developer</option>
+                <option value="UI/UX Designer">UI/UX Designer</option>
+              </select>
+            </div>
+
+            {/* RESUME */}
+            <div>
+              <label className="block mb-2 text-sm font-medium text-gray-700">
+                Upload Resume
+              </label>
+
+              <div className="relative">
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept=".pdf,.doc,.docx"
+                  onChange={handleFileChange}
+                  required
+                  className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200
+                  file:mr-4 file:py-2 file:px-4
+                  file:rounded-lg file:border-0
+                  file:bg-[#2F3E46] file:text-white
+                  file:cursor-pointer
+                  hover:bg-white hover:border-gray-300
+                  focus:outline-none shadow-sm"
+                />
+              </div>
+            </div>
+
+            {/* BUTTON */}
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full py-3 rounded-xl font-semibold text-white
+              bg-[#2F3E46] hover:bg-[#1f2a30]
+              transition-all duration-300 shadow-md active:scale-[0.98]"
+            >
+              {loading ? "Submitting..." : "Submit Application"}
+            </button>
+
+            {/* MESSAGE */}
+            {message && (
+              <p className="text-center text-sm font-medium text-gray-600">
+                {message}
+              </p>
+            )}
+
+          </form>
+
+        </div>
       </div>
-
     </div>
-  );
+  </div>
+);
 }

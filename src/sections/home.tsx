@@ -1,12 +1,10 @@
 
-import ev from '../assets/ChatGPT Image May 8, 2026, 07_25_12 PM.png'
-import skylinx from '../assets/ChatGPT Image May 8, 2026, 07_22_26 PM.png'
+import ev from '../assets/DSREV.png'
+import skylinx from '../assets/ChatGPT Image May 8, 2026, 07_25_12 PM.png'
 import pcube from '../assets/ChatGPT Image May 11, 2026, 02_53_36 PM.png'
-
 import image1 from '../assets/main2.jpg'
 import image2 from '../assets/image2.png'
 import image3 from '../assets/ofcimage5.webp'
-
 import { Homecard } from '../components/homecard'
 import TextCarousel from '../components/carouselcontent'
 import google from '../assets/ChatGPT Image May 19, 2026, 01_27_35 PM.png'
@@ -276,6 +274,7 @@ export function Home() {
           <Latestupdates/>
         </div>
       </div>
+         
     </>
   )
 }

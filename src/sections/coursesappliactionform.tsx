@@ -59,82 +59,133 @@ export function CoursesForm() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
-      <div className="w-full max-w-xl bg-white shadow-xl rounded-2xl p-8">
-        <h2 className="text-3xl font-bold text-center mb-6">
-          Course Registration
-        </h2>
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 via-white to-gray-200 px-4 py-10">
 
-        <form onSubmit={handleSubmit} className="space-y-5">
-          {/* Name */}
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            className="w-full border p-3 rounded-lg"
-          />
+    {/* OUTER GRADIENT BORDER */}
+    <div className="w-full max-w-2xl p-[3px] rounded-3xl bg-gradient-to-r from-[#2F3E46] via-[#3C4F58] to-[#2F3E46] shadow-2xl">
 
-          {/* Email */}
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            className="w-full border p-3 rounded-lg"
-          />
+      {/* GLASS LAYER */}
+      <div className="p-[3px] rounded-3xl bg-white/80 backdrop-blur-md">
 
-          {/* Phone */}
-          <input
-            type="text"
-            name="phno"
-            placeholder="Phone Number"
-            value={formData.phno}
-            onChange={handleChange}
-            required
-            className="w-full border p-3 rounded-lg"
-          />
+        {/* MAIN CARD */}
+        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-inner">
 
-          {/* Course */}
-          <select
-            name="course"
-            value={formData.course}
-            onChange={handleChange}
-            required
-            className="w-full border p-3 rounded-lg"
-          >
-            <option value="">Select Course</option>
-            <option value="VLSI">VLSI</option>
-            <option value="Embedded Systems">Embedded Systems</option>
-            <option value="AWS">AWS</option>
-            <option value="Cybersecurity">Cybersecurity</option>
-            <option value="Full Stack Development">
-              Full Stack Development
-            </option>
-            <option value="SAP">SAP</option>
-          </select>
+          {/* HEADER */}
+          <div className="text-center mb-8">
 
-          {/* Submit */}
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full bg-black text-white p-3 rounded-lg"
-          >
-            {loading ? "Submitting..." : "Enroll Now"}
-          </button>
+            <div className="h-1 w-24 bg-[#2F3E46] rounded-full mx-auto mb-4" />
 
-          {/* Status */}
-          {messageStatus && (
-            <p className="text-center font-medium">
-              {messageStatus}
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#2F3E46]">
+              Course Registration
+            </h2>
+
+            <p className="text-gray-500 mt-2 text-sm sm:text-base">
+              Choose your course and start learning today
             </p>
-          )}
-        </form>
+
+          </div>
+
+          <form onSubmit={handleSubmit} className="space-y-6">
+
+            {/* NAME */}
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200
+              text-gray-800 placeholder-gray-400
+              transition-all duration-300
+              hover:bg-white hover:border-gray-300
+              focus:bg-white focus:border-[#2F3E46]
+              focus:ring-4 focus:ring-[#2F3E46]/15
+              focus:outline-none shadow-sm"
+            />
+
+            {/* EMAIL */}
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200
+              text-gray-800 placeholder-gray-400
+              transition-all duration-300
+              hover:bg-white hover:border-gray-300
+              focus:bg-white focus:border-[#2F3E46]
+              focus:ring-4 focus:ring-[#2F3E46]/15
+              focus:outline-none shadow-sm"
+            />
+
+            {/* PHONE */}
+            <input
+              type="text"
+              name="phno"
+              placeholder="Phone Number"
+              value={formData.phno}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200
+              text-gray-800 placeholder-gray-400
+              transition-all duration-300
+              hover:bg-white hover:border-gray-300
+              focus:bg-white focus:border-[#2F3E46]
+              focus:ring-4 focus:ring-[#2F3E46]/15
+              focus:outline-none shadow-sm"
+            />
+
+            {/* COURSE DROPDOWN */}
+            <select
+              name="course"
+              value={formData.course}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200
+              text-gray-800
+              transition-all duration-300
+              hover:bg-white hover:border-gray-300
+              focus:bg-white focus:border-[#2F3E46]
+              focus:ring-4 focus:ring-[#2F3E46]/15
+              focus:outline-none shadow-sm"
+            >
+              <option value="">Select Course</option>
+              <option value="VLSI">VLSI</option>
+              <option value="Embedded Systems">Embedded Systems</option>
+              <option value="AWS">AWS</option>
+              <option value="Cybersecurity">Cybersecurity</option>
+              <option value="Full Stack Development">
+                Full Stack Development
+              </option>
+              <option value="SAP">SAP</option>
+            </select>
+
+            {/* BUTTON */}
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full py-3 rounded-xl font-semibold text-white
+              bg-[#2F3E46] hover:bg-[#1f2a30]
+              transition-all duration-300 shadow-md active:scale-[0.98]"
+            >
+              {loading ? "Submitting..." : "Enroll Now"}
+            </button>
+
+            {/* STATUS */}
+            {messageStatus && (
+              <p className="text-center text-sm font-medium text-gray-600">
+                {messageStatus}
+              </p>
+            )}
+
+          </form>
+
+        </div>
       </div>
     </div>
-  );
+  </div>
+);
 }
