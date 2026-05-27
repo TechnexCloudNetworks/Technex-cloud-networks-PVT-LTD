@@ -125,7 +125,7 @@ export function Home() {
         </div>
 
         {/* CARDS */}
-        <div>
+        <div className='flex justify-center'>
           <Homecard />
         </div>
 
@@ -174,7 +174,7 @@ export function Home() {
 
               <Link to="/services">
 
-                <button className="p-3 bg-[#2F3E46] rounded-md text-white font-medium px-8 hover:bg-[#1e2a30] transition-all duration-300">
+                <button onClick={()=>window.scrollTo(0,0)} className="p-3 bg-[#2F3E46] rounded-md text-white font-medium px-8 hover:bg-[#1e2a30] transition-all duration-300">
 
                   Explore Services
 
@@ -266,7 +266,7 @@ export function Home() {
             </div>
           </div>
         </div>
-        <div>
+        <div className='flex justify-center'>
          <Mangercard/>
         </div>
         {/* LATEST UPDATES */}

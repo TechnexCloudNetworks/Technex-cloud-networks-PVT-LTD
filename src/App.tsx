@@ -9,7 +9,6 @@ import { Footer } from './components/footer';
 import { Services } from './sections/services';
 import { Career } from './sections/career';
 import { Notfound } from './sections/notfound';
-import  { Applicationform } from './sections/applicationform';
 import { Terms } from './sections/termsandconditions';
 import { Itconsultanvcy } from './sections/itconsultancy';
 import { Edutech } from './sections/edutech';
@@ -19,12 +18,28 @@ import  JobFilterUI from './sections/jobs';
 import { Contactus } from './sections/contactus';
 import CustomCursor from './components/cursor';
 import { CoursesForm } from './sections/coursesappliactionform';
+import PrivacyPolicy from './sections/privacy_policy';
+import Internship from './sections/Internshipterms';
+import { useEffect, useState } from 'react';
 function App() {
+     const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDevice = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
+
+    return () => window.removeEventListener("resize", checkDevice);
+  }, []);
 
   return(
     <>      
      <div >
-      <CustomCursor/>
+      {isDesktop && <CustomCursor />}
+
        <BrowserRouter  >
       <Header/>
       <Routes >
@@ -33,7 +48,6 @@ function App() {
          <Route path="/services" element={<Services/>}/>  
          <Route path="/career" element={<Career/>}/>
           <Route path="/jobs" element={<JobFilterUI/>}/>
-          <Route path="/applicationform" element={<Applicationform/>}/>
           <Route path="/termsandconditions" element={<Terms/>}/>
           <Route path="/itconsultancy" element={<Itconsultanvcy/>}/>
           <Route path="/edutech" element={<Edutech/>}/>
@@ -41,6 +55,8 @@ function App() {
           <Route path="/digitalmarketing" element={<Digitalmarketing/>}/>
           <Route path='/contactus' element={<Contactus/>}/>
           <Route path='/courseform' element={<CoursesForm/>}/>
+          <Route path='/privacy' element={<PrivacyPolicy/>}/>
+          <Route path='/internshipterms' element={<Internship/>}/>
           <Route path="*" element={<Notfound/>}/>
       </Routes>
       <Footer/>

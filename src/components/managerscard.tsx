@@ -1,4 +1,4 @@
-import React from "react";
+
 import famid from '../assets/famid.webp'
 import sirichandana from '../assets/sirichandana.png'
 import venkatsai from '../assets/venkatsai.png'
@@ -39,12 +39,13 @@ const managers: Manager[] = [
 
 export function Mangercard() {
   return (
-    <section className="py-12 px-6  bg-gray-50">
-      <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">
+      <section  className="py-12 px-2  bg-gray-50 md:rounded-lg">
+      <h2 className="text-3xl font-bold text-center mb-10 text-gray-800 ">
         Before the Name, There Was a Vision
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8  pl-9">
+      <div className='flex justify-center'>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:px-7  ">
         {managers.map((manager, index) => (
           <div
             key={index}
@@ -65,7 +66,9 @@ export function Mangercard() {
           </div>
         ))}
       </div>
+      </div>
     </section>
+  
   );
 };
 

@@ -47,7 +47,8 @@ const data3 = [
 export function Homecard(){
     return(
         <>
-       <div className="md:flex justify-center items-center md:mx-0 mx-4 gap-10 p-10 bg-white  overflow-hidden">
+       
+          <div className="md:flex justify-center items-center md:mx-0 mx-4 gap-10 py-10  bg-white  overflow-hidden">
   <div className="wave-up  w-75 h-75 rounded-xl bg-[#062B52] relative overflow-hidden shadow-2xl">
     <div className="p-4 text-white z-10 relative">
       <h3 className="text-lg font-semibold leading-tight">
@@ -392,6 +393,7 @@ export function Homecard(){
     </div></div>
   </div>
 </div>
+       
         </>
     )
 }

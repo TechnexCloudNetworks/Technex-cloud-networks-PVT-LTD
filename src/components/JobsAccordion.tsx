@@ -118,6 +118,12 @@ export default function Accordion() {
                 <p><span className="text-black font-bold">Location:</span> {item.content.location}</p>
                 <p><span className="text-black font-bold">Type:</span> {item.content.type}</p>
                 <p><span className="text-black font-bold">Tools:</span> {item.content.tools.join(", ")}</p>
+                <button className="bg-[#24c0c5] p-3 font-bold mt-4 rounded-md" onClick={() =>
+          window.open(
+            "https://docs.google.com/forms/d/e/1FAIpQLSf9V80yNvPT9q4pvwbmlEr0DNtpT7OCfkxaiQgHczu-HaEwIw/viewform?usp=header",
+            "_blank"
+          )
+        }>Apply Now</button>
               </div>
             </div>
 

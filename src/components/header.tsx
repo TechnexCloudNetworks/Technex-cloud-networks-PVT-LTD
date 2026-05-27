@@ -41,6 +41,7 @@ export function Header() {
                 key={item.path}
                 to={item.path}
                 className="relative px-5 py-2 text-sm font-semibold"
+                onClick={()=>window.scrollTo(0,0)}
               >
                 {active && (
                   <motion.div

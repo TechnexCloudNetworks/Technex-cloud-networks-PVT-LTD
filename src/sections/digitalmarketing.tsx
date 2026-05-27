@@ -60,9 +60,9 @@ export function Digitalmarketing() {
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
-          className="w-full h-[250px] sm:h-[320px] md:h-[400px] rounded-2xl flex items-center overflow-hidden"
+          className="w-full h-[250px] sm:h-[320px] md:h-[400px]  rounded-2xl flex items-center overflow-hidden"
         >
-          <div className="px-5 sm:px-10">
+          <div className="px-5 sm:px-10 bg-[#0000004a] md:p-3 p-2 mx-4 rounded-md">
             <h1 className="text-white font-bold text-2xl sm:text-4xl md:text-5xl leading-tight drop-shadow-lg">
               Our Journey,
               <br />

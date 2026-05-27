@@ -34,7 +34,7 @@ export function CoursesForm() {
       };
 
       await fetch(
-        "https://script.google.com/macros/s/AKfycbzOF-N-lusEKcVt5IVC0Dy9NxgRGwncTqeLMRAxeJH3Ebn2IN3f16YpBXXfdf3QNz78/exec",
+        "https://script.google.com/macros/s/AKfycbzUi5PED_BXYfdxqk_nNnkCMa4hVTGysqFcYvJDR5Kb-n_c-MbL3_aUY9sDfZn64eug/exec",
         {
           method: "POST",
           mode: "no-cors",
@@ -153,14 +153,14 @@ export function CoursesForm() {
               focus:outline-none shadow-sm"
             >
               <option value="">Select Course</option>
+              <option value="Data Science">Data Science</option>
+              <option value="Digital Marketing">Digital Marketing</option>
+              <option value="Fullstack Development">Fullstack Development</option>
+              <option value="Cybersecurity">Cybersecurity</option>
+              <option value="AI/ML">AI/ML</option>
+              <option value="UI/UX Designing">UI/UX Designing</option>
               <option value="VLSI">VLSI</option>
               <option value="Embedded Systems">Embedded Systems</option>
-              <option value="AWS">AWS</option>
-              <option value="Cybersecurity">Cybersecurity</option>
-              <option value="Full Stack Development">
-                Full Stack Development
-              </option>
-              <option value="SAP">SAP</option>
             </select>
 
             {/* BUTTON */}

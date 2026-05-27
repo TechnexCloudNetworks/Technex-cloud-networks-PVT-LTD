@@ -6,6 +6,7 @@ import CareerFAQAccordion from "../components/FaqAccordion";
 export function Career() {
   return (
     <>
+    
       <div>
 
         {/* ================= HERO SECTION ================= */}
@@ -37,12 +38,13 @@ export function Career() {
             </div>
 
             {/* ARROW */}
+            <Link to="/jobs">
             <div className="group flex items-center cursor-pointer mt-3">
               <span className="ml-4 md:ml-20 text-white text-3xl md:text-4xl transition-transform duration-300 group-hover:translate-x-10">
                 ➜
               </span>
             </div>
-
+            </Link>
             {/* BUTTON */}
             <div className="flex justify-center items-center w-full mt-6 md:mt-0">
               <Link to="/jobs">

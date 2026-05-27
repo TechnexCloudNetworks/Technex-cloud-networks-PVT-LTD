@@ -34,7 +34,7 @@ export function Contactus() {
       };
 
       await fetch(
-        "https://script.google.com/macros/s/AKfycbyfVcyK-JwI_ngV1K-ehri8tc34hQ_RpH8vqRJK5POXdu6coOBLuGvULLx7TBo8zIiSng/exec",
+        "https://script.google.com/macros/s/AKfycbxbEiR_ThPn6ui43N1ARRTWNgWxmdLNGv9ze3m3MRYKW_e_tOliSA_Tl3s1RaOzIgax/exec",
         {
           method: "POST",
           mode: "no-cors",

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import image from "../assets/jobsimage.png";
-import { Link } from "react-router-dom";
 
 type Job = {
   title: string;
@@ -11,15 +10,9 @@ type Job = {
 
 const jobs: Job[] = [
   {
-    title: "UI/UX Designer",
-    skills: "Figma, Adobe XD, Sketch, Prototyping",
-    experience: "Freshers",
-    location: "Hyderabad",
-  },
-  {
     title: "React Developer",
     skills: "React, Tailwind, TypeScript",
-    experience: "1-2 yrs",
+    experience: "0-1 yrs",
     location: "Hyderabad",
   },
   {
@@ -35,8 +28,14 @@ const jobs: Job[] = [
     location: "Hyderabad",
   },
   {
+    title: "Business Development Executive",
+    skills: "Communication Skills, Client communication, Negotiation",
+    experience: "0-2 yrs",
+    location: "Hyderabad",
+  },
+  {
     title: "HR Executive",
-    skills: "Recruitment, Training",
+    skills: "Communication Skills,Recruitment, Training",
     experience: "0-1 yrs",
     location: "Hyderabad",
   },
@@ -46,6 +45,12 @@ const jobs: Job[] = [
     experience: "0-1 yrs",
     location: "Hyderabad",
   },
+   {
+    title: "UI/UX Designer",
+    skills: "Figma, Adobe XD, Sketch, Prototyping",
+    experience: "0-1 yrs",
+    location: "Hyderabad",
+  }
 ];
 
 export default function JobFilterUI() {
@@ -173,11 +178,16 @@ export default function JobFilterUI() {
                   </div>
                 </div>
 
-                <Link to="/applicationform">
-                  <button className="w-full bg-[#35c6cf] text-white font-bold py-3 md:py-4 tracking-wide hover:bg-[#28b2bb] transition duration-300 mt-auto text-sm md:text-base">
+                
+                  <button onClick={() =>
+          window.open(
+            "https://docs.google.com/forms/d/e/1FAIpQLSf9V80yNvPT9q4pvwbmlEr0DNtpT7OCfkxaiQgHczu-HaEwIw/viewform?usp=header",
+            "_blank"
+          )
+        } className="w-full bg-[#35c6cf] text-white font-bold py-3 md:py-4 tracking-wide hover:bg-[#28b2bb] transition duration-300 mt-auto text-sm md:text-base">
                     APPLY
                   </button>
-                </Link>
+                
 
               </div>
             ))

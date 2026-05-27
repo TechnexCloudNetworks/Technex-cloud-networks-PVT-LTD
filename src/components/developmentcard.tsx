@@ -1,23 +1,16 @@
 // ProcessCarousel.tsx
-import React, { useEffect, useRef } from "react";
+import  { useEffect, useRef } from "react";
 import next_wash from "../assets/nextwash.png";
 import dsr from "../assets/DSREV.png";
-
+import pcube from '../assets/ChatGPT Image May 11, 2026, 02_53_36 PM.png'
+import brainstrom from '../assets/brainstrom.png'
+import whitebook from '../assets/whitebook.png'
 const clients = [
   { image: next_wash },
   { image: dsr },
-  {
-    image:
-      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w-1200&auto=format&fit=crop",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w-1200&auto=format&fit=crop",
-  },
+  {image:pcube},
+  {image:brainstrom},
+  {image:whitebook}
 ];
 
 export default function ProcessCarousel() {

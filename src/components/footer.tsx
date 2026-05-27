@@ -22,6 +22,7 @@ export function Footer() {
               <img
                 src={logo}
                 className="w-[60px] h-[60px] rounded-full object-cover hover:scale-105 transition"
+                alt="logo"
               />
 
               <h2 className="text-[30px] font-bold tracking-wide">
@@ -41,10 +42,10 @@ export function Footer() {
                 { icon: instagram, link: "https://www.instagram.com/technex_cloud_networks?igsh=MTNuZXFtejIyZ2p0OQ==" },
                 { icon: facebook, link: "https://www.facebook.com/share/1Bk74pA2BP/" },
               ].map((item, i) => (
-                <a key={i} href={item.link} target="_blank">
+                <a key={i} href={item.link} target="_blank" rel="noreferrer">
                   <div className="w-[38px] h-[38px] flex items-center justify-center rounded-full bg-white/5 border border-white/10
                     hover:bg-[#24c0c5] hover:scale-110 hover:shadow-[0_0_12px_#24c0c5] transition">
-                    <img src={item.icon} className="w-[18px] h-[18px]" />
+                    <img src={item.icon} className="w-[18px] h-[18px]" alt="social" />
                   </div>
                 </a>
               ))}
@@ -65,8 +66,12 @@ export function Footer() {
                 { name: "Services", path: "/services" },
                 { name: "Career", path: "/career" },
               ].map((item, i) => (
-                <li key={i} className="hover:text-white hover:translate-x-1 transition">
-                  <Link to={item.path} onClick={() => window.scrollTo(0, 0)}>
+                <li key={i} className="hover:text-white transition">
+                  <Link
+                    to={item.path}
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="inline-block hover:translate-x-1 transition hover:underline"
+                  >
                     {item.name}
                   </Link>
                 </li>
@@ -81,12 +86,20 @@ export function Footer() {
             </h3>
 
             <ul className="space-y-4 text-[14px] text-gray-300">
-              {["Internships", "Placement Guidance", "All Courses"].map((item, i) => (
+              {[{ name: "Internship", path: "/edutech", point:1800 },
+                { name: "Placemnet Guidance", path: "/edutech",point:1800  },
+                { name: "All Courses", path: "/edutech",point:400  }].map((item, i) => (
                 <li
                   key={i}
-                  className="hover:text-white hover:translate-x-1 transition cursor-pointer"
+                  className="hover:text-white hover:translate-x-1 transition cursor-pointer hover:underline"
                 >
-                  {item}
+                 <Link
+                    to={item.path}
+                    onClick={() => window.scrollTo({top: item.point,behavior:'smooth'})}
+                    className="inline-block hover:translate-x-1 transition hover:underline"
+                  >
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -99,19 +112,40 @@ export function Footer() {
             </h3>
 
             <ul className="space-y-4 text-[14px] text-gray-300">
-              <li className="hover:text-white transition cursor-pointer">
-                Privacy Policy
+
+              <li className="hover:text-white transition">
+                <Link
+                  to="/privacy"
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="inline-block hover:translate-x-1 transition hover:underline"
+                >
+                  Privacy Policy
+                </Link>
               </li>
 
-              <li className="hover:text-white transition cursor-pointer">
-                <Link to="/termsandconditions">Terms & Conditions</Link>
+              <li className="hover:text-white transition">
+                <Link
+                  to="/termsandconditions"
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="inline-block hover:translate-x-1 transition hover:underline"
+                >
+                  Terms & Conditions
+                </Link>
               </li>
 
-              <li className="hover:text-white transition cursor-pointer">
-                Internship Terms
+              <li className="hover:text-white transition">
+                <Link
+                  to="/internshipterms"
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="inline-block hover:translate-x-1 transition hover:underline"
+                >
+                  Internship Terms
+                </Link>
               </li>
+
             </ul>
           </div>
+
         </div>
 
         {/* DIVIDER */}
@@ -120,6 +154,7 @@ export function Footer() {
             © 2026 TechNex Cloud Networks. All rights reserved.
           </p>
         </div>
+
       </div>
     </footer>
   );

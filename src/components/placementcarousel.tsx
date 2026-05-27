@@ -18,14 +18,14 @@ import p7 from '../assets/Y_Deepanwitha.png'
 import p8 from '../assets/bhaskar.png'
 const placements: Placement[] = [
    {
-    name: "bongoni vinay",
+    name: "Bongoni Vinay",
     role: "Software Developer",
     company: "TECK BRICKS India PVT LTD",
     image: p2,
      salary:'6LPA'
   },
   {
-    name: "Shivani",
+    name: "K.Shivani",
     role: "Software Engineer",
     company: "TCS",
     image: p1,
@@ -46,30 +46,30 @@ const placements: Placement[] = [
     salary:'4LPA'
   },
   {
-    name: "Nithya",
+    name: "Sree Lekha",
     role: "Quality Testing",
-    company: "Dsr ev mobility pvt ltd",
+    company: "DSR EV Mobility Pvt ltd",
     image: p5,
     salary:'4LPA'
   },
   {
-    name: "Sree Lekha",
+    name: "Nithya",
     role: "Research and Development",
-    company: "Dsr ev mobility pvt ltd",
+    company: "DSR EV Mobility Pvt ltd",
     image: p6,
     salary:'4LPA'
   },
    {
-    name: "Y Deepanwitha",
+    name: "Y. Deepanwitha",
     role: "Business Development Executive",
-    company: "Gemsheild pvt ltd",
+    company: "Gemsheild Pvt ltd",
     image: p7,
     salary:'3.5LPA'
   },
  {
-    name: "Bhaskar",
-    role: "data analyst",
-    company: "Amazon Web services",
+    name: "B.Bhaskar",
+    role: "Data Analyst",
+    company: "Amazon Web Services",
     image: p8,
     salary:'4.5LPA'
   }

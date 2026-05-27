@@ -1,5 +1,4 @@
-// ProcessSection.tsx
-import React from "react";
+
 
 const steps = [
   {

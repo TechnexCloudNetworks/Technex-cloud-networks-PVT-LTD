@@ -1,16 +1,16 @@
 // ServicesGrid.tsx
-import React from "react";
+
 import image2 from "../assets/itimage2.png";
 import image3 from "../assets/itimage3.png";
 import image4 from "../assets/itimage4.png";
 import image6 from "../assets/itimage6.png";
-
+import image5 from '../assets/aboutimage1.png'
 const cards = [
   {
     id: 1,
     image: image2,
     content:
-      "We begin by understanding your business objectives, workforce challenges, project requirements, and long-term goals. Our team works closely with you to identify the right hiring strategy and build a strong foundation for successful collaboration.",
+      "We begin by understanding your business objectives, workforce challenges, project requirements, and long-term goals. Our team collaborates with you to identify the right hiring strategy and build a strong foundation for successful partnership.",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const cards = [
   {
     id: 4,
     image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+     image5 ,
     content:
       "We provide dependable placement services that align with your business goals and project expectations. In case of changing requirements, we offer quick and efficient replacement support to maintain uninterrupted operations.",
   },
@@ -35,14 +35,14 @@ const cards = [
     id: 5,
     image: image6,
     content:
-      "We handle payroll management, compliance processes, employee coordination, and ongoing workforce support. Our goal is to ensure smooth operations while allowing your business to focus on growth and performance.",
+      "We handle payroll management, compliance processes, employee coordination, and ongoing workforce support with efficiency and care. Our goal is to ensure smooth day-to-day operations while allowing your business to focus on growth, productivity, and overall performance.",
   },
 ];
 
 export function Itcard() {
   return (
-    <section className="min-h-screen bg-[#e9e9e9] px-10 py-12">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-12 gap-y-10 md:grid-cols-2">
+    <section className=" bg-[#e9e9e9] px-10 py-12">
+      <div className="mx-auto mb-3 md:mb-0 grid max-w-7xl grid-cols-1 gap-x-12 gap-y-10 md:grid-cols-2">
 
         {cards.map((card, index) => (
           <div
@@ -85,7 +85,7 @@ export function Itcard() {
                   overflow-hidden
                 "
               >
-                <p className="md:text-[15px] text-[10px] font-semibold leading-[1.5] text-black break-words">
+                <p className="md:text-[15px] text-[10px] font-semibold leading-[1.5] text-gray-600 break-words">
                   {card.content}
                 </p>
               </div>

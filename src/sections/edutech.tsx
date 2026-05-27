@@ -86,7 +86,7 @@ export function Edutech() {
         style={{ backgroundImage: `url(${Image})` }}
         className="bg-cover bg-center h-[400px] w-full"
       >
-        <div className="h-full w-full flex items-center bg-gradient-to-r from-[#2f3e46d2] via-[#2f3e4620] to-transparent">
+        <div className="h-full w-full flex items-center bg-gradient-to-r from-[#2f3e46d2] via-[#2f3e467f] to-transparent">
 
           {/* ONLY MOBILE CHANGED */}
           <div className="px-6 md:px-0">
@@ -97,12 +97,6 @@ export function Edutech() {
             <p className="text-gray-200 md:px-32 py-2 text-sm md:text-base max-w-[320px] md:max-w-full">
               Driving Educational Excellence with Modern Technology
             </p>
-
-            <div className="group flex items-center cursor-pointer">
-              <span className="text-4xl text-white md:px-32 transition-transform duration-300 group-hover:translate-x-6">
-                ➜
-              </span>
-            </div>
           </div>
 
         </div>
